@@ -1,0 +1,230 @@
+/* --- الإعدادات الأساسية والخلفية الجيمنج --- */
+body {
+    background-color: #0b0b13;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- الهيدر (العنوان الرئيسي الموسط والمطور) --- */
+.main-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #00ff9d, #00e1ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* تدريج لوني فخم للنص */
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #b0b0bc;
+}
+
+/* --- لوحة التحكم وتقسيم الكروت جنب بعض --- */
+.dashboard-grid {
+    display: table;
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: separate;
+    border-spacing: 20px 0;
+}
+
+.card {
+    display: table-cell;
+    width: 50%;
+    background: rgba(20, 20, 27, 0.85);
+    border: 1px solid #2a2a3a;
+    padding: 25px;
+    border-radius: 12px;
+    vertical-align: top;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #ff0055;
+    font-size: 1.4rem;
+}
+
+.card p {
+    color: #a0a0b0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- حقول الإدخال والأزرار العادية --- */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+#ramInput {
+    flex: 1;
+    padding: 12px;
+    background: #181824;
+    border: 1px solid #3a3a50;
+    color: white;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+#ramInput:focus {
+    border-color: #00ff9d;
+    box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+}
+
+#calculateBtn {
+    background: #00ff9d;
+    color: #0b0b13;
+    border: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+#calculateBtn:hover {
+    background: #00cc7d;
+    box-shadow: 0 0 15px #00ff9d;
+}
+
+.btn-secondary {
+    background: #00e1ff;
+    color: #0b0b13;
+    border: none;
+    padding: 12px 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn-secondary:hover {
+    background: #00b3cc;
+    box-shadow: 0 0 15px #00e1ff;
+}
+
+/* --- صناديق ظهور النتائج والبادجات --- */
+.result-box {
+    margin-top: 20px;
+    min-height: 40px;
+}
+
+.server-badge {
+    background: rgba(0, 255, 157, 0.1);
+    color: #00ff9d;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #00ff9d;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.ram-details p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin: 8px 0;
+}
+
+.ram-details span {
+    color: #ffff00;
+    font-weight: bold;
+}
+
+/* --- أزرار تحميل النيون الأسطورية (Neon Buttons) --- */
+.neon-btn, #downloadLink {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #ff0055, #7a00ff);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    transition: all 0.4s ease;
+    animation: neonPulse 2s infinite alternate;
+    cursor: pointer;
+}
+
+.neon-btn:hover, #downloadLink:hover {
+    background: linear-gradient(45deg, #7a00ff, #ff0055);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 0 20px #ff0055, 0 0 40px #7a00ff;
+}
+
+/* زر النيون الأزرق المخصص للمنظف */
+.blue-neon {
+    background: linear-gradient(45deg, #00e1ff, #0055ff) !important;
+    animation: bluePulse 2s infinite alternate !important;
+}
+
+/* أنيميشن النبض للملفين */
+@keyframes neonPulse {
+    0% { box-shadow: 0 0 10px rgba(255, 0, 85, 0.6), 0 0 20px rgba(122, 0, 255, 0.4); }
+    100% { box-shadow: 0 0 25px #ff0055, 0 0 45px #7a00ff; }
+}
+
+@keyframes bluePulse {
+    0% { box-shadow: 0 0 10px rgba(0, 225, 255, 0.6); }
+    100% { box-shadow: 0 0 25px #00e1ff; }
+}
+
+/* كلاسات الألوان المتنوعة */
+.result-loading { color: #ffff00; font-weight: bold; }
+.result-error { color: #ff4a4a; font-weight: bold; }
+
+
+
+/* --- استايل الـ Footer الممتد بالكامل --- */
+footer {
+    width: 100%;
+    background: #07070d; /* لون داكن مميز ومختلف عن الخلفية عشان يفصل التصميم */
+    border-top: 1px solid #1f1f2e;
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    margin-top: 100px; /* مسافة محترمة بين الكروت والنهاية */
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.6);
+    left: 0;
+    right: 0;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #8c8c9e;
+}
+
+footer span {
+    color: #ff0055;
+    font-weight: bold;
+    text-shadow: 0 0 12px rgba(255, 0, 85, 0.6); /* توهج نيون لاسمك */
+}
+
+.footer-note {
+    font-size: 0.8rem;
+    color: #4a4a5a;
+    margin-top: 8px;
+}

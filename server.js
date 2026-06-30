@@ -67,4 +67,5 @@ pause
 
 app.listen(PORT, () => {
     console.log(`🚀 سـيرفر الداشبورد شغال على: http://localhost:${PORT}`);
+    module.exports = app; // لتسهيل الاختبارات أو الاستخدام في ملفات أخرى
 });

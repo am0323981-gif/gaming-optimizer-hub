@@ -4,9 +4,6 @@
     { "src": "server.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/calculate-ram", "dest": "server.js" },
-    { "src": "/download-bat", "dest": "server.js" },
-    { "src": "/download-cleaner", "dest": "server.js" },
-    { "src": "/(.*)", "dest": "/$1" }
+    { "src": "/(.*)", "dest": "server.js" }
   ]
 }

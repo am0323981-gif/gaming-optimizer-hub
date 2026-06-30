@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -67,5 +68,10 @@ pause
 
 app.listen(PORT, () => {
     console.log(`🚀 سـيرفر الداشبورد شغال على: http://localhost:${PORT}`);
+    app.use(express.static(path.join(__dirname, './')));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
     module.exports = app; // لتسهيل الاختبارات أو الاستخدام في ملفات أخرى
 });
